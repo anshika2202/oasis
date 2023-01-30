@@ -1,62 +1,131 @@
-window.addEventListener('load', () => {
-	const form = document.querySelector("#task-form");
-	const input = document.querySelector("#task-input");
-	const list_element = document.querySelector("#tasks");
+function dis(val){
+    const display=document.getElementById('result')
+    display.value+=val
+}
+function slove(){
+    const display=document.getElementById('result')
+    let x=display.value
+    let y=eval(x)
+    display.value=y
+}
+function del(){
+    const display=document.getElementById('result')
+    display.value=''
 
-	form.addEventListener('submit', (e) => {
-		e.preventDefault();
+}
+function x2(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,2)
 
-		const task = input.value;
+}
+function x3(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,3)
+    
+}
+function x4(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,4)
+    
+}
+function x5(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,5)
+    
+}
+function x6(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,6)
+    
+}
+function x7(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,7)
+    
+}
+function x8(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,8)
+    
+}
+function x9(){
+    const display=document.getElementById('result')
+    display.value=Math.pow(display.value,9)
+    
+}
+function sin(){
+    const display=document.getElementById('result')
+    display.value=Math.sin(display.value*(Math.PI/180))
 
-		const task_element = document.createElement('div');
-		task_element.classList.add('task');
+}
+function sinh(){
+    const display=document.getElementById('result')
+    display.value=Math.sinh(display.value)
+    
+}
+function asin(){
+    const display=document.getElementById('result')
+    display.value=Math.asin(display.value)
+    
+}
+function asinh(){
+    const display=document.getElementById('result')
+    display.value=Math.asinh(display.value)
+    
+}
+function cos(){
+    const display=document.getElementById('result')
+    display.value=Math.cos(display.value*(Math.PI/180))
 
-		const task_content_element = document.createElement('div');
-		task_content_element.classList.add('content');
+}
+function cosh(){
+    const display=document.getElementById('result')
+    display.value=Math.cosh(display.value)
+    
+}
+function acos(){
+    const display=document.getElementById('result')
+    display.value=Math.acos(display.value)
+    
+}
+function acosh(){
+    const display=document.getElementById('result')
+    display.value=Math.acosh(display.value)
+    
+}
+function tan(){
+    const display=document.getElementById('result')
+    display.value=Math.tan(display.value*(Math.PI/180))
 
-		task_element.appendChild(task_content_element);
+}
+function tanh(){
+    const display=document.getElementById('result')
+    display.value=Math.tanh(display.value)
+    
+}
+function atanh(){
+    const display=document.getElementById('result')
+    display.value=Math.atanh(display.value)
+    
+}
+function cot(){
+    const display=document.getElementById('result')
+    display.value=1/Math.tan(display.value)
+    
+}
+function coth(){
+    const display=document.getElementById('result')
+    display.value=1/Math.tanh(display.value)
+    
+}
+function log(){
+    const display=document.getElementById('result')
+    display.value=Math.log10(display.value)
+    
+}
 
-		const task_input_element = document.createElement('input');
-		task_input_element.classList.add('text');
-		task_input_element.type = 'text';
-		task_input_element.value = task;
-		task_input_element.setAttribute('readonly', 'readonly');
-
-		task_content_element.appendChild(task_input_element);
-
-		const task_actions_element = document.createElement('div');
-		task_actions_element.classList.add('actions');
-		
-		const task_edit_element = document.createElement('button');
-		task_edit_element.classList.add('edit');
-		task_edit_element.innerText = 'Edit';
-
-		const task_delete_element = document.createElement('button');
-		task_delete_element.classList.add('delete');
-		task_delete_element.innerText = 'Delete';
-
-		task_actions_element.appendChild(task_edit_element);
-		task_actions_element.appendChild(task_delete_element);
-
-		task_element.appendChild(task_actions_element);
-
-		list_element.appendChild(task_element);
-
-		input.value = '';
-
-		task_edit_element.addEventListener('click', (e) => {
-			if (task_edit_element.innerText.toLowerCase() == "edit") {
-				task_edit_element.innerText = "Save";
-				task_input_element.removeAttribute("readonly");
-				task_input_element.focus();
-			} else {
-				task_edit_element.innerText = "Edit";
-				task_input_element.setAttribute("readonly", "readonly");
-			}
-		});
-
-		task_delete_element.addEventListener('click', (e) => {
-			list_element.removeChild(task_element);
-		});
-	});
-});
+function ln(){
+    const display=document.getElementById('result')
+    display.value=Math.log(display.value)
+    
+}
